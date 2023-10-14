@@ -1,0 +1,24 @@
+Основы бэкенда MySQL
+
+https://onecompiler.com/mysql/3zqf52e8j
+
+
+-- create
+CREATE TABLE employee (
+  id INTEGER PRIMARY KEY AUTO_INCREMENT,
+  name TEXT NOT NULL,
+  dept TEXT NOT NULL
+);
+
+-- insert
+INSERT INTO employee (name, dept) VALUES ('Clark', 'Sales');
+INSERT INTO employee (name, dept) VALUES ('Dave', 'Accounting');
+INSERT INTO employee (name, dept) VALUES ('Ava', 'Sales');
+INSERT INTO employee (name, dept) VALUES ('Vava', 'Sales');
+INSERT INTO employee (name, dept) VALUES ('Wawe', 'Accounting');
+INSERT INTO employee (name, dept) VALUES ('Mark', 'Sales');
+INSERT INTO employee (name, dept) VALUES ('Tom', 'Sales');
+
+-- fetch 
+SELECT id, name as Имя FROM employee WHERE (dept = 'Sales' AND id > 2) OR dept = 'Accounting'
+ORDER BY name;
